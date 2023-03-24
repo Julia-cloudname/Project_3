@@ -18,60 +18,6 @@ def get_user_data():
     print("Example: female\n")
     gender = input("Enter your data here:\n")
 
-    print("Calculating...")
-    return weight, height, age, gender
-
-
-def basal_metabolic_rate_woman(weight, height, age, gender):
-    """
-    Calculate basal metabolic rate for women
-    """
-    bmr = 655.1 + (9.6 * weight) + (1.85 * height) - (age * 4.68) 
-    # source - Wikipedia
-    print(f"Weight: {weight}, height: {height}, age: {age}, gender: {gender}")
-    print(f"Your basal metabolic rate is {int(bmr)} calories per day.")
-    print("""\n    Basal metabolic rate (BMR) - minimum amount of calories 
-    that our body needs to carry out basic functions such
-    as breathing, circulation, and cell production while 
-    at rest. In other words, it is the  amount of 
-    energy required by our body to keep functioning 
-    while we are doing nothing.""")
-
-
-def basal_metabolic_rate_man(weight, height, age, gender):
-    """
-    Calculate basal metabolic rate for men
-    """
-    bmr = 66.5 + (13.7 * weight) + (5 * height) - (age * 6.75)
-    # source - Wikipedia
-    print(f"Weight:{weight}, height:{height}, age:{age}, gender:{gender}")
-    print(f"Your basal metabolic rate is {int(bmr)} calories per day.")
-    print("""\n    Basal metabolic rate (BMR) - minimum amount of calories 
-    that our body needs to carry out basic functions such
-    as breathing, circulation, and cell production while 
-    at rest. In other words, it is the  amount of 
-    energy required by our body to keep functioning 
-    while we are doing nothing.\n""")
-
-
-def determine_gender():
-    """
-    Calculate BMR depend on gender
-    """
-    weight, height, age, gender = get_user_data()
-    if (gender == "male"):
-        basal_metabolic_rate_man(weight, height, age, gender)
-    else:
-        basal_metabolic_rate_woman(weight, height, age, gender)
-
-
-determine_gender()
-
-
-def activity_multiplier():
-    """ 
-    Define type of activity based on user answer
-    """
     print("\nPlease enter data about your activity")
     print("""\n    Little or no exercise: press 1\n
     1–3 days per week of exercise or activity: press 2\n
@@ -79,30 +25,82 @@ def activity_multiplier():
     6–7 days per week of hard exercise: press 4\n
     athletes who train twice per day or more: press 5""")
     print("Example: 2\n")
-    activity = int(input("Enter your data here:\n"))
+    activity = input("Enter your data here:\n")
 
-    return activity 
-
-
-activity_multiplier()
-
-
-def get_user_goal():
-    """
-    Get data input from the user about goal
-    """
     print("\nPlease enter data about your goal")
     print("""\n    To lose weight : enter 'lose'\n
     To keep weight: enter 'maintain'\n
     To gain weight : enter 'gain' """)
     print("Example: lose\n")
     goal = input("Enter your data here:\n")
-    print(goal)
+
+    return weight, height, age, gender, activity, goal
 
 
-get_user_goal()
+def basal_metabolic_rate_woman(weight, height, age):
+    """
+    Calculate basal metabolic rate for women
+    """
+    bmr = 655.1 + (9.6 * weight) + (1.85 * height) - (age * 4.68) 
+    # source - Wikipedia
+    print(f"Weight: {weight}, height: {height}, age: {age}, gender: woman")
+    print(f"Your basal metabolic rate is {int(bmr)} calories per day.")
+    print("""\n    Basal metabolic rate (BMR) - minimum amount of calories 
+    that our body needs to carry out basic functions such
+    as breathing, circulation, and cell production while 
+    at rest. In other words, it is the  amount of 
+    energy required by our body to keep functioning 
+    while we are doing nothing.""")
+    return bmr
 
-def calorie_calculator():
+
+def basal_metabolic_rate_man(weight, height, age):
+    """
+    Calculate basal metabolic rate for men
+    """
+    bmr = 66.5 + (13.7 * weight) + (5 * height) - (age * 6.75)
+    # source - Wikipedia
+    print(f"Weight:{weight}, height:{height}, age:{age}, gender: man")
+    print(f"Your basal metabolic rate is {int(bmr)} calories per day.")
+    print("""\n    Basal metabolic rate (BMR) - minimum amount of calories 
+    that our body needs to carry out basic functions such
+    as breathing, circulation, and cell production while 
+    at rest. In other words, it is the  amount of 
+    energy required by our body to keep functioning 
+    while we are doing nothing.\n""")
+    return bmr
+
+
+def calculate_bmr(weight, height, age, gender):
+    """
+    Calculate BMR depend on gender
+    """
+    if (gender == "male"):
+        return basal_metabolic_rate_man(weight, height, age)
+    else:
+        return basal_metabolic_rate_woman(weight, height, age)
+
+
+def calorie_calculator(activity, bmr):
     """ 
     Calculate calorie needs based on BMR
     """
+    if activity == "1":
+        calorie_needs = bmr * 1.2
+    elif activity == "2":
+        calorie_needs = bmr * 1.37
+    elif activity == "3":
+        calorie_needs = bmr * 1.55
+    elif activity == "4":
+        calorie_needs = bmr * 1.72
+    else:
+        calorie_needs = bmr * 1.9        
+
+    return calorie_needs 
+        
+
+if __name__ == "__main__":
+    weight, height, age, gender, activity, goal = get_user_data()
+    bmr = calculate_bmr(weight, height, age, gender)
+    daily_calorie = calorie_calculator(activity, bmr)
+    print(daily_calorie)
