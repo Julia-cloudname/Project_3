@@ -2,44 +2,70 @@ def get_user_height():
     """
     Get data input from the user - height
     """
-    print("Please enter your height in centimeters")
-    print("Example: 172\n")
-    user_height = int(input("Enter your data here:\n"))
+    while True:
+        print("Please enter your height in centimeters")
+        print("Example: 172\n")
+        try:
+            user_height = int(input("Enter your data here:\n"))
+            if user_height >= 300 or user_height <= 50:
+                print("\nPlease enter a valid height")
+            else:
+                return user_height
+        except ValueError:
+            print("\nNot a number. Please, enter your height as a number\n")
 
-    return user_height
-
-
+        
 def get_user_weight():
     """
     Get data input from the user - weight
     """
-    print("\nPlease enter your weight in kilograms")
-    print("Example: 70\n")
-    user_weight = int(input("Enter your data here:\n"))
-    
-    return user_weight
-
+    while True:
+        print("\nPlease enter your weight in kilograms")
+        print("Example: 70\n")
+        try:
+            user_weight = int(input("Enter your data here:\n"))
+            if user_weight >= 500 or user_weight <= 3:
+                print("\nPlease enter a valid weight")
+            else:
+                return user_weight
+        except ValueError:
+            print("\nNot a number. Please, enter your weight as a number\n")
+        
 
 def get_user_age():
     """
     Get data input from the user - age
     """
-    print("\nPlease enter your age")
-    print("Example: 38\n")
-    user_age = int(input("Enter your data here:\n"))
+    while True:
+        print("\nPlease enter your age")
+        print("Example: 38\n")
+        try:
+            user_age = int(input("Enter your data here:\n"))
 
-    return user_age
+            if user_age >= 120 or user_age <= 2:
+                print("\nPlease enter a valid age")
+            else:
+                return user_age
+        except ValueError:
+            print("\nNot a number. Please, enter your age as a number\n")
 
 
 def get_user_gender():
     """
     Get data input from the user - gender
     """
-    print("\nPlease enter 'female' if you are woman and 'male' if you are man")
-    print("Example: female\n")
-    user_gender = input("Enter your data here:\n")
+    while True:
+        print("\nPlease enter 'female' if you are woman and 'male' if you are man")
+        print("Example: female\n")
+        try:
+            user_gender = input("Enter your data here:\n")
 
-    return user_gender
+            if user_gender != 'female' or user_gender != 'male':
+                print(f"\nYou entered {user_gender}. Please, enter 'male' or 'female'\n")
+            else:
+                return user_gender
+        except ValueError:
+            print("Gender is not valid")
 
 
 def get_user_activity():
@@ -140,7 +166,7 @@ def goal_calorie():
     """
     get_height = get_user_height()
     get_weight = get_user_weight()
-    
+
     get_age = get_user_age()
     get_gender = get_user_gender()
     get_activity = get_user_activity()
@@ -159,7 +185,7 @@ def goal_calorie():
     print(f"\nYour daily calorie needs are:\n    {daily_calorie} calories per day")
     print(f"\nTo {get_goal} weight eat:")
     
-    return new_calorie
+    return int(new_calorie)
 
 
 if __name__ == "__main__":
