@@ -78,8 +78,8 @@ def basal_metabolic_rate_woman(weight, height, age):
     """
     bmr = 655.1 + (9.6 * weight) + (1.85 * height) - (age * 4.68) 
     # source - Wikipedia
-    print(f"Weight: {weight}, height: {height}, age: {age}, gender: woman")
-    print(f"Your basal metabolic rate is {int(bmr)} calories per day.")
+    print(f"\nWeight: {weight}, height: {height}, age: {age}, gender: woman")
+    print(f"\nYour basal metabolic rate is {int(bmr)} calories per day.")
     print("""\n    Basal metabolic rate (BMR) - minimum amount of calories 
     that our body needs to carry out basic functions such
     as breathing, circulation, and cell production while 
@@ -131,16 +131,38 @@ def calorie_calculator(activity, bmr):
     else:
         calorie_needs = bmr * 1.9        
 
-    return calorie_needs 
-        
+    return int(calorie_needs) 
 
-if __name__ == "__main__":
-    get_weight = get_user_weight()
+
+def goal_calorie():
+    """ 
+    Calculate calorie needs depend on user goal
+    """
     get_height = get_user_height()
+    get_weight = get_user_weight()
+    
     get_age = get_user_age()
     get_gender = get_user_gender()
     get_activity = get_user_activity()
     get_goal = get_user_goal()
+    
     get_bmr = calculate_bmr(get_weight, get_height, get_age, get_gender)
     daily_calorie = calorie_calculator(get_activity, get_bmr)
-    print(daily_calorie)
+    
+    if get_goal == "lose":
+        new_calorie = daily_calorie - 500
+    elif get_goal == "gain":
+        new_calorie = daily_calorie + 500
+    else:
+        new_calorie = daily_calorie
+
+    print(f"\nYour daily calorie needs are:\n    {daily_calorie} calories per day")
+    print(f"\nTo {get_goal} weight eat:")
+    
+    return new_calorie
+
+
+if __name__ == "__main__":
+    
+    get_goal_calorie = goal_calorie()
+    print(f"    {get_goal_calorie} calories per day")
