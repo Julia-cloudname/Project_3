@@ -1,23 +1,51 @@
-def get_user_data():
+def get_user_height():
     """
-    Get data input from the user 
+    Get data input from the user - height
     """
     print("Please enter your height in centimeters")
     print("Example: 172\n")
-    height = int(input("Enter your data here:\n"))
+    user_height = int(input("Enter your data here:\n"))
 
+    return user_height
+
+
+def get_user_weight():
+    """
+    Get data input from the user - weight
+    """
     print("\nPlease enter your weight in kilograms")
     print("Example: 70\n")
-    weight = int(input("Enter your data here:\n"))
+    user_weight = int(input("Enter your data here:\n"))
+    
+    return user_weight
 
+
+def get_user_age():
+    """
+    Get data input from the user - age
+    """
     print("\nPlease enter your age")
     print("Example: 38\n")
-    age = int(input("Enter your data here:\n"))
+    user_age = int(input("Enter your data here:\n"))
 
+    return user_age
+
+
+def get_user_gender():
+    """
+    Get data input from the user - gender
+    """
     print("\nPlease enter 'female' if you are woman and 'male' if you are man")
     print("Example: female\n")
-    gender = input("Enter your data here:\n")
+    user_gender = input("Enter your data here:\n")
 
+    return user_gender
+
+
+def get_user_activity():
+    """
+    Get data input from the user - activity
+    """
     print("\nPlease enter data about your activity")
     print("""\n    Little or no exercise: press 1\n
     1–3 days per week of exercise or activity: press 2\n
@@ -25,16 +53,23 @@ def get_user_data():
     6–7 days per week of hard exercise: press 4\n
     athletes who train twice per day or more: press 5""")
     print("Example: 2\n")
-    activity = input("Enter your data here:\n")
+    user_activity = input("Enter your data here:\n")
 
+    return user_activity
+
+
+def get_user_goal():
+    """
+    Get data input from the user - height
+    """
     print("\nPlease enter data about your goal")
     print("""\n    To lose weight : enter 'lose'\n
     To keep weight: enter 'maintain'\n
     To gain weight : enter 'gain' """)
     print("Example: lose\n")
-    goal = input("Enter your data here:\n")
+    user_goal = input("Enter your data here:\n")
 
-    return weight, height, age, gender, activity, goal
+    return user_goal
 
 
 def basal_metabolic_rate_woman(weight, height, age):
@@ -100,7 +135,12 @@ def calorie_calculator(activity, bmr):
         
 
 if __name__ == "__main__":
-    weight, height, age, gender, activity, goal = get_user_data()
-    bmr = calculate_bmr(weight, height, age, gender)
-    daily_calorie = calorie_calculator(activity, bmr)
+    get_weight = get_user_weight()
+    get_height = get_user_height()
+    get_age = get_user_age()
+    get_gender = get_user_gender()
+    get_activity = get_user_activity()
+    get_goal = get_user_goal()
+    get_bmr = calculate_bmr(get_weight, get_height, get_age, get_gender)
+    daily_calorie = calorie_calculator(get_activity, get_bmr)
     print(daily_calorie)
