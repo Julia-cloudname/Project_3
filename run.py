@@ -117,8 +117,8 @@ def bmr_woman(weight_value, height_value, age_value):
         (1.85 * height_value) - \
         (age_value * 4.68)
     # source - Wikipedia
-    print(f"\nWeight: {weight_value}, height: {height_value},"
-          f" age: {age_value}, gender: woman")
+    print(f"\nWeight: {weight_value}, height: {height_value}, "
+          f"age: {age_value}, gender: woman")
     print(f"\nYour basal metabolic rate is {int(bmr_value)} calories per day.")
     print("\n\tBasal metabolic rate (BMR) - minimum amount of calories"
           "that our body needs to carry out basic functions such"
@@ -133,9 +133,7 @@ def bmr_man(weight_value, height_value, age_value):
     """
     Calculate basal metabolic rate for men
     """
-    bmr_value = 66.5 + \
-        (13.7 * weight_value) + \
-        (5 * height_value) - \
+    bmr_value = 66.5 + (13.7 * weight_value) + (5 * height_value) - \
         (age_value * 6.75)
     # source - Wikipedia
     print(f"Weight:{weight_value}, height:{height_value}"
@@ -162,13 +160,13 @@ def calculate_bmr(weight_value, height_value, age_value, gender_value):
 
 def calorie_calculator(activity_value, bmr_value):
     "Calculate calorie needs based on BMR"
-    if activity_value == "1":
+    if activity_value == 1:
         calorie_needs = bmr_value * 1.2
-    elif activity_value == "2":
+    elif activity_value == 2:
         calorie_needs = bmr_value * 1.37
-    elif activity_value == "3":
+    elif activity_value == 3:
         calorie_needs = bmr_value * 1.55
-    elif activity_value == "4":
+    elif activity_value == 4:
         calorie_needs = bmr_value * 1.72
     else:
         calorie_needs = bmr_value * 1.9
