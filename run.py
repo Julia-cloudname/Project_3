@@ -59,9 +59,9 @@ def get_user_gender():
               "and 'male' if you are man")
         print("Example: female\n")
         try:
-            user_gender = input("Enter your data here:\n")
+            user_gender = input("Enter your data here:\n").lower()
 
-            if user_gender != 'female' and user_gender != 'male':
+            if user_gender not in ['female', 'male']:
                 print(
                     f"\nYou entered {user_gender}."
                     f"Please, enter 'male' or 'female'\n")
@@ -103,7 +103,7 @@ def get_user_goal():
     To keep weight: enter 'maintain'\n
     To gain weight : enter 'gain' """)
     print("Example: lose\n")
-    user_goal = input("Enter your data here:\n")
+    user_goal = input("Enter your data here:\n").lower()
 
     return user_goal
 
