@@ -1,3 +1,15 @@
+def menu():
+    """Menu for user with 2 options"""
+    while True:
+        print("1. Enter Q to end program\n"
+              "2. Enter S to start again")
+        user_choice = input("").lower()
+        if user_choice not in ["q", "s"]:
+            print(f"\nYou entered {user_choice}. Please enter Q or S")
+        else:
+            return user_choice
+
+
 def get_user_height():
     """
     Get data input from the user - height
@@ -191,44 +203,32 @@ def goal_calorie(goal_value, daily_calorie_value):
         return int(daily_calorie_value)
 
 
-# def menu():
-#     "Ends program and starts again"
-#     while True:
-#         print("1. Enter 1 to end program\n"
-#               "2. Enter 2 to reset and start again")
-#         try:
-#             user_choice = int(input(""))
-#             if user_choice not in [1, 2]:
-#                 print(f"\nYou entered {user_choice}."
-#                       f"Please enter 1 or 2")
-#             else:
-#                 return user_choice
-#         except ValueError:
-#             print("""\n Please, chose your goal from menu\n""")
+def main():
+    """Start code"""
 
-#         if user_choice == 1:
-#             exit()
-#         else:
-#             main()
+    while True:
+        user_choice = menu()
+
+        if user_choice == "q":
+            exit()
+        else:
+            height = get_user_height()
+            weight = get_user_weight()
+            age = get_user_age()
+            gender = get_user_gender()
+            activity = get_user_activity()
+            goal = get_user_goal()
+
+            bmr = calculate_bmr(weight, height, age, gender)
+            daily_calorie = calorie_calculator(activity, bmr)
+
+            goal_calorie_value = goal_calorie(goal, daily_calorie)
+
+            print(f"\nYour daily calorie needs are: "
+                  f" {daily_calorie} calories per day")
+            print(f"\nTo {goal} weight eat: {goal_calorie_value}"
+                  f"calories per day")
 
 
 if __name__ == "__main__":
-
-    height = get_user_height()
-    weight = get_user_weight()
-
-    age = get_user_age()
-    gender = get_user_gender()
-    activity = get_user_activity()
-    goal = get_user_goal()
-
-    bmr = calculate_bmr(weight, height, age, gender)
-    daily_calorie = calorie_calculator(activity, bmr)
-
-    goal_calorie = goal_calorie(goal, daily_calorie)
-
-    print(f"\nYour daily calorie needs are: {daily_calorie} calories per day")
-
-    print(f"\nTo {goal} weight eat: {goal_calorie} calories per day")
-
-    # menu()
+    main()
