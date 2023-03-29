@@ -98,14 +98,21 @@ def get_user_goal():
     """
     Get data input from the user - height
     """
-    print("\nPlease enter data about your goal")
-    print("""\n    To lose weight : enter 'lose'\n
-    To keep weight: enter 'maintain'\n
-    To gain weight : enter 'gain' """)
-    print("Example: lose\n")
-    user_goal = input("Enter your data here:\n").lower()
-
-    return user_goal
+    while True:
+        print("\nPlease enter data about your goal")
+        print("""\n    To lose weight : enter 'lose'\n
+        To keep weight: enter 'maintain'\n
+        To gain weight : enter 'gain' """)
+        print("Example: lose\n")
+        try:
+            user_goal = input("Enter your data here:\n").lower()
+            if user_goal not in ['lose', 'maintain', 'gain']:
+                print(f"\nYou entered {user_goal}."
+                      f"Please enter a valid goal")
+            else:
+                return user_goal
+        except ValueError:
+            print("""\n Please, chose your goal from menu\n""")
 
 
 def bmr_woman(weight_value, height_value, age_value):
@@ -138,13 +145,12 @@ def bmr_man(weight_value, height_value, age_value):
     # source - Wikipedia
     print(f"Weight:{weight_value}, height:{height_value}"
           f"age:{age_value}, gender: man")
-    print(f"Your basal metabolic rate is {int(bmr_value)} calories per day.")
-    print("\nBasal metabolic rate (BMR) - minimum amount of calories"
-          " that our body needs to carry out basic functions such"
-          " as breathing, circulation, and cell production while"
-          " at rest. In other words, it is the  amount of"
-          " energy required by our body to keep functioning"
-          " while we are doing nothing.\n")
+    print(f"Your basal metabolic rate is {int(bmr_value)} calories per day.\n")
+    print("""Basal metabolic rate (BMR) - minimum amount of calories
+    that our body needs to carry out basic functions such as breathing,
+    circulation, and cell production while at rest. In other words, it
+    is the  amount of energy required by our body to keep functioning
+    while we are doing nothing.\n""")
     return bmr_value
 
 
@@ -185,6 +191,27 @@ def goal_calorie(goal_value, daily_calorie_value):
         return int(daily_calorie_value)
 
 
+# def menu():
+#     "Ends program and starts again"
+#     while True:
+#         print("1. Enter 1 to end program\n"
+#               "2. Enter 2 to reset and start again")
+#         try:
+#             user_choice = int(input(""))
+#             if user_choice not in [1, 2]:
+#                 print(f"\nYou entered {user_choice}."
+#                       f"Please enter 1 or 2")
+#             else:
+#                 return user_choice
+#         except ValueError:
+#             print("""\n Please, chose your goal from menu\n""")
+
+#         if user_choice == 1:
+#             exit()
+#         else:
+#             main()
+
+
 if __name__ == "__main__":
 
     height = get_user_height()
@@ -200,7 +227,8 @@ if __name__ == "__main__":
 
     goal_calorie = goal_calorie(goal, daily_calorie)
 
-    print("\nYour daily calorie needs are:")
-    print(f"\n{daily_calorie} calories per day")
+    print(f"\nYour daily calorie needs are: {daily_calorie} calories per day")
 
-    print(f"\nTo {goal} weight eat: {goal_calorie}")
+    print(f"\nTo {goal} weight eat: {goal_calorie} calories per day")
+
+    # menu()
