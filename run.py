@@ -4,8 +4,8 @@ from art import text2art
 def menu():
     """Menu for user with 2 options"""
     while True:
-        print("1. Enter Q to end program\n"
-              "2. Enter S to start again")
+        print("1. Enter S to start program/ run again\n"
+              "2. Enter Q to end program\n")
         user_choice = input("").lower()
         if user_choice not in ["q", "s"]:
             print(f"\nYou entered {user_choice}. Please enter Q or S")
