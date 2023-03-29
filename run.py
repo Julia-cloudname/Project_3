@@ -1,6 +1,3 @@
-from art import text2art
-
-
 def menu():
     """Menu for user with 2 options"""
     while True:
@@ -208,13 +205,31 @@ def goal_calorie(goal_value, daily_calorie_value):
         return int(daily_calorie_value)
 
 
+def print_welcome():
+    """Print welcome message"""
+    print("""
+    
+         *     (                                                         
+   (   (  `    )\ )     (          (             (           )           
+ ( )\  )\))(  (()/(     )\      )  )\        (   )\    )  ( /(      (    
+ )((_)((_)()\  /(_))  (((_)  ( /( ((_) (    ))\ ((_)( /(  )\()) (   )(   
+((_)_ (_()((_)(_))    )\___  )(_)) _   )\  /((_) _  )(_))(_))/  )\ (()\  
+ | _ )|  \/  ||_ _|  ((/ __|((_)_ | | ((_)(_))( | |((_)_ | |_  ((_) ((_) 
+ | _ \| |\/| | | |    | (__ / _` || |/ _| | || || |/ _` ||  _|/ _ \| '_| 
+ |___/|_|  |_||___|    \___|\__,_||_|\__|  \_,_||_|\__,_| \__|\___/|_|   
+                                                                         
+
+    """)
+    print("Welcome to the calorie calculator! Let's burn calories!")
+ 
+
 def main():
     """Start code"""
+    print_welcome()
 
     while True:
-        text = 'BMI Calculator'
-        ascii_text = text2art(text, font='bigmoney-ne')
-        print(ascii_text)
+
+        input("Press Enter to continue...")
         user_choice = menu()
 
         if user_choice == "q":
