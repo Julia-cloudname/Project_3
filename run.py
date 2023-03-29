@@ -1,3 +1,6 @@
+from art import text2art
+
+
 def menu():
     """Menu for user with 2 options"""
     while True:
@@ -76,7 +79,7 @@ def get_user_gender():
             if user_gender not in ['female', 'male']:
                 print(
                     f"\nYou entered {user_gender}."
-                    f"Please, enter 'male' or 'female'\n")
+                    f" Please, enter 'male' or 'female'\n")
             else:
                 return user_gender
         except ValueError:
@@ -120,7 +123,7 @@ def get_user_goal():
             user_goal = input("Enter your data here:\n").lower()
             if user_goal not in ['lose', 'maintain', 'gain']:
                 print(f"\nYou entered {user_goal}."
-                      f"Please enter a valid goal")
+                      f" Please enter a valid goal")
             else:
                 return user_goal
         except ValueError:
@@ -137,9 +140,10 @@ def bmr_woman(weight_value, height_value, age_value):
         (age_value * 4.68)
     # source - Wikipedia
     print(f"\nWeight: {weight_value}, height: {height_value}, "
-          f"age: {age_value}, gender: woman")
-    print(f"\nYour basal metabolic rate is {int(bmr_value)} calories per day.")
-    print("\n\tBasal metabolic rate (BMR) - minimum amount of calories"
+          f" age: {age_value}, gender: woman")
+    print(f"\nYour basal metabolic rate is"
+          f" {int(bmr_value)} calories per day.\n")
+    print("Basal metabolic rate (BMR) - minimum amount of calories"
           "that our body needs to carry out basic functions such"
           "as breathing, circulation, and cell production while "
           "at rest. In other words, it is the  amount of"
@@ -155,14 +159,15 @@ def bmr_man(weight_value, height_value, age_value):
     bmr_value = 66.5 + (13.7 * weight_value) + (5 * height_value) - \
         (age_value * 6.75)
     # source - Wikipedia
-    print(f"Weight:{weight_value}, height:{height_value}"
-          f"age:{age_value}, gender: man")
+    print(f"Weight: {weight_value}, height: {height_value}"
+          f" age: {age_value}, gender: man")
     print(f"Your basal metabolic rate is {int(bmr_value)} calories per day.\n")
-    print("""Basal metabolic rate (BMR) - minimum amount of calories
-    that our body needs to carry out basic functions such as breathing,
-    circulation, and cell production while at rest. In other words, it
-    is the  amount of energy required by our body to keep functioning
-    while we are doing nothing.\n""")
+    print("Basal metabolic rate (BMR) - minimum amount of calories"
+          "that our body needs to carry out basic functions such"
+          "as breathing, circulation, and cell production while "
+          "at rest. In other words, it is the  amount of"
+          "energy required by our body to keep functioning"
+          "while we are doing nothing.")
     return bmr_value
 
 
@@ -207,6 +212,9 @@ def main():
     """Start code"""
 
     while True:
+        text = 'BMI Calculator'
+        ascii_text = text2art(text, font='bigmoney-ne')
+        print(ascii_text)
         user_choice = menu()
 
         if user_choice == "q":
@@ -227,7 +235,7 @@ def main():
             print(f"\nYour daily calorie needs are: "
                   f" {daily_calorie} calories per day")
             print(f"\nTo {goal} weight eat: {goal_calorie_value}"
-                  f"calories per day")
+                  f" calories per day")
 
 
 if __name__ == "__main__":
