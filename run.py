@@ -236,8 +236,8 @@ def main():
         user_choice = menu()
 
         if user_choice == "q":
-            print("The program is finished")
-            menu()
+            print("The program is finished. Press Run progran to start it")
+            exit()
         else:
             height = get_user_height()
             weight = get_user_weight()
