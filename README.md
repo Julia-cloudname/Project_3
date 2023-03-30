@@ -77,3 +77,10 @@ This is the flow chart of the app:
 #### **Control the program**
 
 * To control the program user can use the menu at the start and at the end of the program.  User enter data with keyboard follof the instruction on the screen. 
+
+## **Future-Enhancements**
+​
+There are several features with scope for future improvement. I would have liked to add the following in future:
+​
+* Recomendation how to speed up the metabolic rate, for example, by increasing or changing physical activity, improving diet and sleep, calorie content and food composition.
+* Add calculate the rate of proteins, fats, carbohydrates
