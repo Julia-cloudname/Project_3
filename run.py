@@ -236,9 +236,7 @@ def goal_calorie(goal_value, daily_calorie_value):
 
 def print_welcome():
     """Prints welcome message"""
-    print("""
-
-    
+    print("""   
          *     (                                                         
    (   (  `    )\ )     (          (             (           )           
  ( )\  )\))(  (()/(     )\      )  )\        (   )\    )  ( /(      (    
@@ -247,12 +245,8 @@ def print_welcome():
  | _ )|  \/  || _ \  ((/ __|((_)_ | | ((_)(_))( | |((_)_ | |_  ((_) ((_) 
  | _ \| |\/| ||   /   | (__ / _` || |/ _| | || || |/ _` ||  _|/ _ \| '_| 
  |___/|_|  |_||_|_\    \___|\__,_||_|\__|  \_,_||_|\__,_| \__|\___/|_|   
-                                                                         
-
-
-
 """)
-    print("Welcome to the calorie calculator! Let's burn calories!")
+    print("Welcome to the calorie calculator! Let's calculate calorie needs!")
 
 
 def main():
@@ -288,3 +282,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
