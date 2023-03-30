@@ -35,11 +35,19 @@ The application is created in Python and uses functions, loops, and conditional 
 ​
 ## **Planning Stage**
 
-<br>
-
 #### **Target Audiences:**
 * People who want to lose weight and are interested in monitoring their calorie intake to create a calorie deficit and achieve weight loss.
 * People who want to maintain their weight and use a calorie calculator to determine their daily calorie needs to maintain their current weight.
 * Physically active people and Athletes, who need to determine their daily calorie needs to support their training and physical activity.
 * People with health conditions, such as diabetes, who want to monitor their calorie intake and manage their condition.
 * Fitness and health and professionals, such as dietitians and personal trainers, who create custom nutrition plans for their clients.
+
+<br>
+
+#### **User Stories:**
+* As a user, I want to understand how to start the program.
+* As a user, I want to quickly learn and understand how to control the application
+* As a user, I want a clean and simple user interface.
+* As a user, I want the app to run smoothly and bug-free and how to fix them if they are happening (if I enter not valid data )
+* As a user, I want to get calculated results after entering the data
+* As a user, I want to be able to choose whether or not to run app again when it ends.
