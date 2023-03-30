@@ -79,6 +79,8 @@ This is the flow chart of the app:
 
 ![Screenshot of start screen](images/screen_menu.png)
 
+![Screenshot of start screen](images/questions.png)
+
 ## **Future-Enhancements**
 ​
 There are several features with scope for future improvement. I would have liked to add the following in future:
