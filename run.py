@@ -1,5 +1,9 @@
 def menu():
-    """Menu for user with 2 options"""
+    """
+    The function presents a menu to the user with two options:
+    to start the program or to end it. If the input is valid, the function
+    returns the user's choice ("Q" or "S") as a string.
+    """
     while True:
         print("1. Enter S to start program/ run again\n"
               "2. Enter Q to end program\n")
@@ -12,7 +16,9 @@ def menu():
 
 def get_user_height():
     """
-    Get data input from the user - height
+    Gets the user's height input in centimetres. If the
+    input is not valid, prints a message telling to enter a valid
+    height. Returns the input as an integer in a variable.
     """
     while True:
         print("Please enter your height in centimeters")
@@ -29,7 +35,9 @@ def get_user_height():
 
 def get_user_weight():
     """
-    Get data input from the user - weight
+    Gets the user's weight input in kg. If the input is not valid,
+    prints a message telling to enter a valid weight. Returns the
+    input as an integer in a variable.
     """
     while True:
         print("\nPlease enter your weight in kilograms")
@@ -46,7 +54,9 @@ def get_user_weight():
 
 def get_user_age():
     """
-    Get data input from the user - age
+    Gets the user's age input in full years. If the input is not valid,
+    prints a message telling to enter a valid age. Returns the input as
+    an integer in a variable.
     """
     while True:
         print("\nPlease enter your age")
@@ -64,7 +74,9 @@ def get_user_age():
 
 def get_user_gender():
     """
-    Get data input from the user - gender
+    Gets the user's gender as string input from the keyboard. If the
+    input is not valid, it prints a message telling to enter a valid gender.
+    Returns the input as a string in a variable.
     """
     while True:
         print("\nPlease enter 'female' if you are woman"
@@ -85,7 +97,9 @@ def get_user_gender():
 
 def get_user_activity():
     """
-    Get data input from the user - activity
+    Gets the user's activity as integer. If the input is not valid,
+    it prints a message telling to enter a valid number. Returns the
+    input as an integer in a variable.
     """
     while True:
         print("\nPlease enter data about your activity")
@@ -98,7 +112,8 @@ def get_user_activity():
         try:
             user_activity = input("Enter your data here:\n")
             if user_activity not in ['1', '2', '3', '4', '5']:
-                print("\nPlease enter a valid number of activity")
+                print("""\nPlease enter a valid number of activity from"
+                      "1 till 5""")
             else:
                 return int(user_activity)
         except ValueError:
@@ -108,7 +123,9 @@ def get_user_activity():
 
 def get_user_goal():
     """
-    Get data input from the user - height
+    Gets the user's goal as string input from the keyboard. If the
+    input is not valid, it prints a message telling to enter a valid goal.
+    Returns the input as a string in a variable.
     """
     while True:
         print("\nPlease enter data about your goal")
@@ -129,7 +146,9 @@ def get_user_goal():
 
 def bmr_woman(weight_value, height_value, age_value):
     """
-    Calculate basal metabolic rate for women
+    Calculates basal metabolic rate for women. Function takes weight,
+    height and age as parametres. Returns calculation as integer in
+    variable
     """
     bmr_value = 655.1 + \
         (9.6 * weight_value) + \
@@ -151,7 +170,9 @@ def bmr_woman(weight_value, height_value, age_value):
 
 def bmr_man(weight_value, height_value, age_value):
     """
-    Calculate basal metabolic rate for men
+    Calculates basal metabolic rate for men. Function takes weight,
+    height and age as parametres. Returns calculation as integer in
+    variable
     """
     bmr_value = 66.5 + (13.7 * weight_value) + (5 * height_value) - \
         (age_value * 6.75)
@@ -170,7 +191,9 @@ def bmr_man(weight_value, height_value, age_value):
 
 def calculate_bmr(weight_value, height_value, age_value, gender_value):
     """
-    Calculate BMR depend on gender
+    Calculates BMR depend on gender. Function takes weight,
+    height, age and gender as parametres. Returns calculation as integer in
+    variable
     """
     if (gender_value == "male"):
         return bmr_man(weight_value, height_value, age_value)
@@ -179,7 +202,10 @@ def calculate_bmr(weight_value, height_value, age_value, gender_value):
 
 
 def calorie_calculator(activity_value, bmr_value):
-    "Calculate calorie needs based on BMR"
+    """
+    Calculats calorie needs based on BMR. Function takes activity and
+    BMR as parametres. Returns calculation as integer in variable
+    """
     if activity_value == 1:
         calorie_needs = bmr_value * 1.2
     elif activity_value == 2:
@@ -195,7 +221,10 @@ def calorie_calculator(activity_value, bmr_value):
 
 
 def goal_calorie(goal_value, daily_calorie_value):
-    "Calculate calorie needs depend on user goal"
+    """
+    Calculats calorie needs depend on user goal. Function takes goal and
+    daily calorie as parametres. Returns calculation as integer in variable
+    """
 
     if goal_value == "lose":
         return int(daily_calorie_value - 500)
@@ -206,7 +235,7 @@ def goal_calorie(goal_value, daily_calorie_value):
 
 
 def print_welcome():
-    """Print welcome message"""
+    """Prints welcome message"""
     print("""
 
     
@@ -224,10 +253,10 @@ def print_welcome():
 
 """)
     print("Welcome to the calorie calculator! Let's burn calories!")
- 
+
 
 def main():
-    """Start code"""
+    """Starts program"""
     print_welcome()
 
     while True:
