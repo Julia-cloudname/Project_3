@@ -98,3 +98,10 @@ There are several features with scope for future improvement. I would have liked
 * I made sure the app performed as expected from start to finish.
 * I tried to use the app on a local terminal and on Heroku several times. The app worked as anticipated with no errors.
 * When entering incorrect data, I saw error messages on the screen and suggestions on how to fix them in order to continue the application
+
+**Validators**
+
+* The validator shows a number of minor warnings, which are related to the use of the ASCII art used in the start screen. In my final mentor session, I was informed these are inconsequential and can essentially be ignored as they do not affect the program itself.
+
+![Results](images/Python_validator.png)
+
