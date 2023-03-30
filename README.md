@@ -14,7 +14,7 @@ The application is created in Python and uses functions, loops, and conditional 
 1. [**Planning stage**](#planning-stage)
     * [***Target Audiences***](#target-audiences)
     * [***User Stories***](#user-stories)
-    * [***Site Aims***](#site-aims)
+    * [***App Aims***](#app-aims)
     * [***Lucid Chart***](#lucid-chart)
     * [***Color Scheme***](#color-scheme)
     * [***Typography***](#typography)
@@ -51,3 +51,12 @@ The application is created in Python and uses functions, loops, and conditional 
 * As a user, I want the app to run smoothly and bug-free and how to fix them if they are happening (if I enter not valid data )
 * As a user, I want to get calculated results after entering the data
 * As a user, I want to be able to choose whether or not to run app again when it ends.
+
+<br>
+
+#### **App Aims:**
+* To offer the user a smooth and bug free version of a classic game with a slightly different twist.
+* To provide a clean and simple interface for the user with no need to reference external sources.
+* To provide clear instructions and a win condition.
+* To provide an enjoyable user experience of playing battleships.
+* To provide an interesting and entertaining Star Wars-based version of the game.
