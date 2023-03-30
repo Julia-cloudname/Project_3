@@ -84,3 +84,11 @@ There are several features with scope for future improvement. I would have liked
 ​
 * Recomendation how to speed up the metabolic rate, for example, by increasing or changing physical activity, improving diet and sleep, calorie content and food composition.
 * Add calculate the rate of proteins, fats, carbohydrates
+
+## **Testing Phase**
+​
+**Functionality**
+
+* I made sure the app performed as expected from start to finish.
+* I tried to use the app on a local terminal and on Heroku several times. The app worked as anticipated with no errors.
+* When entering incorrect data, I saw error messages on the screen and suggestions on how to fix them in order to continue the application
