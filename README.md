@@ -15,7 +15,7 @@ The application is created in Python and uses functions, loops, and conditional 
     * [***Target Audiences***](#target-audiences)
     * [***User Stories***](#user-stories)
     * [***App Aims***](#app-aims)
-    * [***Lucid Chart***](#lucid-chart)
+    * [***App diagrams***](#app-diagrams)
     * [***Color Scheme***](#color-scheme)
     * [***Typography***](#typography)
 1. [**Current Features**](#current-features)
@@ -60,3 +60,12 @@ The application is created in Python and uses functions, loops, and conditional 
 * To provide clear instructions and a win condition.
 * To provide an enjoyable user experience of playing battleships.
 * To provide an interesting and entertaining Star Wars-based version of the game.
+
+<br>
+
+#### **App diagrams**
+
+I used [app.diagrams.net](app.diagrams.net) to planning stages of this project
+
+This is the flow chart of the app:
+![app.diagrams](diagram)
