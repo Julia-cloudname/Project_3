@@ -49,11 +49,9 @@ The application is created in Python and uses functions, loops, and conditional 
 <br>
 
 #### **App Aims:**
-* To offer the user a smooth and bug free version of a classic game with a slightly different twist.
-* To provide a clean and simple interface for the user with no need to reference external sources.
-* To provide clear instructions and a win condition.
-* To provide an enjoyable user experience of playing battleships.
-* To provide an interesting and entertaining Star Wars-based version of the game.
+
+* To offer users a simple application to calculate basal metabolic rate
+* To offer users a daily calorie calculator app based on height, weight, age, activity, and goals
 
 <br>
 
