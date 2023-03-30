@@ -1,31 +1,10 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Calorie Calculator**
+## **Overview**
 
-Welcome Julia,
+Calorie Calculator is a console application for calculating daily calorie requirements based on height, weight, gender, and physical activity. In this application, the user inputs the required data, and based on that, the program calculates the basal metabolic rate (BMR). This is the minimum number of calories required by our body to perform basic functions such as breathing, blood circulation, and cell production while at rest. In other words, it is the amount of energy our body needs to continue functioning while doing nothing.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Additionally, the user can receive recommendations on how many calories they should consume per day to achieve their goal, whether it is to lose, gain, or maintain weight.
 
-## Reminders
+To calculate the basal metabolic rate, the Harris-Benedict formula is used, based on total body mass, height, age, and gender. The application uses recommendations from The Centers for Disease Control and Prevention for weight loss and weight gain to calculate daily calorie requirements.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+The application is created in Python and uses functions, loops, and conditional statements to calculate the result.
