@@ -65,20 +65,24 @@ The application is created in Python and uses functions, loops, and conditional 
 I used [app.diagrams.net](app.diagrams.net) to planning stages of this project
 
 This is the flow chart of the app:
-![app.diagrams](diagram)
+
+![app.diagrams](images/diagram.png)
+
 <br>
 
 ## **Current Features**
 
 #### **Start Screen** 
 
-![Screenshot of start screen](png)
+![Screenshot of start screen](images/start_screen.png)
 
 * The start screen features the name of the program - BMR Calculator. Then app prompts to press enter and chose to end the program or start.
 
 #### **Control the program**
 
-* To control the program user can use the menu at the start and at the end of the program.  User enter data with keyboard follof the instruction on the screen. 
+* To control the program user can use the menu at the start and at the end of the program.  User enter data with keyboard follow the instruction on the screen. 
+
+![Screenshot of start screen](images/screen_menu.png)
 
 ## **Future-Enhancements**
 ​
