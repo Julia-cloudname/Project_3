@@ -16,14 +16,9 @@ The application is created in Python and uses functions, loops, and conditional 
     * [***User Stories***](#user-stories)
     * [***App Aims***](#app-aims)
     * [***App diagrams***](#app-diagrams)
-    * [***Color Scheme***](#color-scheme)
-    * [***Typography***](#typography)
 1. [**Current Features**](#current-features)
-    * [***Data Module***](#data-module)
     * [***Start Screen***](#start-screen)
-    * [***Pre-Game***](#pre-game)
-    * [***Gameplay***](#gameplay)
-    * [***Game Over***](#game-over)
+    * [***Control the program***](#control-the-program)
 1. [**Future-Enhancements**](#future-enhancements)
 1. [**Testing Phase**](#testing-phase)
 1. [**Deployment**](#deployment)
@@ -69,3 +64,16 @@ I used [app.diagrams.net](app.diagrams.net) to planning stages of this project
 
 This is the flow chart of the app:
 ![app.diagrams](diagram)
+<br>
+
+## **Current Features**
+
+#### **Start Screen** 
+
+![Screenshot of start screen](png)
+
+* The start screen features the name of the program - BMR Calculator. Then app prompts to press enter and chose to end the program or start.
+
+#### **Control the program**
+
+* To control the program user can use the menu at the start and at the end of the program.  User enter data with keyboard follof the instruction on the screen. 
