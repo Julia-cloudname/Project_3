@@ -9,6 +9,8 @@ To calculate the basal metabolic rate, the Harris-Benedict formula is used, base
 
 The application is created in Python and uses functions, loops, and conditional statements to calculate the result.
 
+![Am I Responsive Screenshot](images/bmr_calculator.png)
+
 ## Table of contents:
 1. [**Overview**](#overview)
 1. [**Planning stage**](#planning-stage)
