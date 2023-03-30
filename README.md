@@ -25,11 +25,8 @@ The application is created in Python and uses functions, loops, and conditional 
 1. [**Testing Phase**](#testing-phase)
 1. [**Deployment**](#deployment)
 1. [**Tech**](#tech)
-1. [**Credits**](#credits)
-    * [**Content**](#content)
-    * [**Media**](#media)
-    * [**Honourable mentions**](#honorable-mentions)
-​
+1. [**Sourses**](#sourses)
+   
 ## **Planning Stage**
 
 #### **Target Audiences:**
@@ -143,3 +140,25 @@ The project was deployed to [Heroku](https://www.heroku.com) using the below pro
    * Select the correct branch for deployment from the drop-down menu and click the "Deploy Branch" button for manual deployment. 
 
 The final deployment can be viewed [here](https://health-calculators.herokuapp.com/)
+
+## **Tech**
+
+The app made with Python
+
+## **Sourses**
+
+* While creating the project I used these sources to search formulas for calculate results:
+
+https://en.wikipedia.org/wiki/Basal_metabolic_rate
+
+https://www.k-state.edu/paccats/Contents/PA/PDF/Physical%20Activity%20and%20Controlling%20Weight.pdf
+
+https://www.medicalnewstoday.com/articles/calorie-deficit#calculating-calorie-needs
+
+https://www.medicalnewstoday.com/articles/calorie-deficit#weight-loss
+
+https://docs.python.org/3/library
+
+* For creating ASCI art: https://patorjk.com/
+* For creating diagrams: https://app.diagrams.net/
+
