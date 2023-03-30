@@ -105,3 +105,14 @@ There are several features with scope for future improvement. I would have liked
 
 ![Results](images/Python_validator.png)
 
+
+## **Bugs**
+​
+The following bugs were identified during user testing:
+* The daily calorie intake was calculated incorrectly, the result was the same with basal metabolism.
+
+✅ Solution: in the calorie_calculator function, I changed the compared data from a string to an integer, because the get_user_activity function, which asks the user for the activity level, returns an integer
+
+* In several functions that accept user input, the data validator signalled an error when a word was capitalized.
+
+✅ Solution: added the lower() method to these functions to convert all input data to a single form
